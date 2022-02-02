@@ -1,9 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import joblib
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.utils import shuffle
-import numpy as np
 from sklearn.naive_bayes import ComplementNB
 
 
@@ -17,8 +14,6 @@ for stopword in bangla_stopword_lists:
     bangla_stopword_list.append(stopword[0])
 
 bangla_stopwords = frozenset(bangla_stopword_list)
-
-#data = data.sample(frac=1).reset_index(drop=True)
 
 
 # Split into training and testing data
